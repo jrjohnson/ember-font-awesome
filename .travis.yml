@@ -39,6 +39,9 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
 
 install:
+  - npm config set spin false
+  - npm install -g npm@4
+  - npm --version
   - yarn install --no-lockfile --non-interactive
 
 script:
